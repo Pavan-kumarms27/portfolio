@@ -1,0 +1,97 @@
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* Added a subtle internal glow (inset) to make the glass edge pop */
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  /* Always specify which properties to transition for better GPU performance */
+  transition:
+    transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+  /* Prevents microscopic text blurring during the transform lift */
+  will-change: transform;
+}
+
+.glass:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  transform: translateY(-6px);
+  /* FIXED: Shadow expands and softens as the card lifts up, creating realistic depth */
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* ================= SCROLLBARS ================= */
+
+/* FIXED: Modern cross-browser standard for Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--bg);
+}
+
+/* Chrome, Edge, Safari, and Opera */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary); /* Solid fallback */
+  /* Replaced with standard solid/gradient handling layer */
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary),
+    var(--secondary)
+  );
+  border-radius: 999px;
+  /* Added border trick to create "padding" around the track */
+  border: 2px solid var(--bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* Give the user interactive feedback when grabbing the scrollbar */
+  background-image: linear-gradient(
+    to bottom,
+    var(--secondary),
+    var(--primary)
+  );
+}
+
+@media (max-width: 600px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box !important;
+  }
+
+  html,
+  body,
+  #root,
+  [data-reactroot] {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+
+  /* Force elements to fit within container limits */
+  img,
+  svg,
+  canvas,
+  video {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}

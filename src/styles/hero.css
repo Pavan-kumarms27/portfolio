@@ -1,0 +1,426 @@
+/*================ HERO =================*/
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 155px 0 80px; /* Boosted top padding by 15px (from 120px to 135px) */
+  overflow: hidden;
+  background-color: #030014; /* Ensuring dark theme backdrop */
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  align-items: center;
+  gap: 70px;
+}
+
+/*================ LEFT =================*/
+
+.hero-left {
+  max-width: 700px;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  color: var(--primary);
+  font-weight: 600;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin-bottom: 30px;
+}
+
+.hero-small-title {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  font-size: clamp(3.8rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -3px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-role {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.hero-description {
+  max-width: 620px;
+  color: var(--text-light);
+  line-height: 1.9;
+  font-size: 1.08rem;
+  margin-bottom: 45px;
+}
+
+/*================ BUTTONS =================*/
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 34px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.35s;
+}
+
+.primary-btn {
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.35);
+}
+
+.primary-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(124, 58, 237, 0.45);
+}
+
+.secondary-btn {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--text);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+}
+
+/*================ SOCIAL =================*/
+
+.hero-socials {
+  display: flex;
+  gap: 18px;
+}
+
+.hero-socials a {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 1.2rem;
+  transition: 0.35s;
+}
+
+.hero-socials a:hover {
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  box-shadow: 0 15px 30px rgba(124, 58, 237, 0.35);
+}
+
+/*================ RIGHT =================*/
+
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.profile-ring {
+  position: relative;
+  width: clamp(340px, 34vw, 460px);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  padding: 6px;
+  z-index: 3;
+  box-shadow:
+    0 0 60px rgba(124, 58, 237, 0.35),
+    0 0 120px rgba(59, 130, 246, 0.2);
+  transition: 0.4s;
+}
+
+.profile-ring img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  display: block;
+}
+
+/*================ GLOW =================*/
+
+.hero-glow {
+  position: absolute;
+  width: 520px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.3),
+    rgba(59, 130, 246, 0.18),
+    transparent 70%
+  );
+  filter: blur(70px);
+  z-index: 0;
+}
+
+/*================ PROFILE =================*/
+
+.profile-ring {
+  width: clamp(220px, 28vw, 280px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  padding: 6px;
+}
+
+.profile-ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: scale(1.12);
+  transform-origin: center;
+  display: block;
+}
+
+.profile-ring:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 100px rgba(124, 58, 237, 0.45),
+    0 0 180px rgba(59, 130, 246, 0.25);
+}
+
+.contact-social-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--glass, rgba(255, 255, 255, 0.05));
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.contact-social-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/*================ RESPONSIVE =================*/
+
+@media (max-width: 1200px) {
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  .hero-title {
+    font-size: 4.8rem;
+  }
+  .profile-ring {
+    width: 290px;
+    height: 290px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 155px 0 80px; /* Kept the +15px balance for mid-range viewports */
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 80px;
+    text-align: center;
+  }
+  .profile-ring img {
+    transform: scale(1.08);
+  }
+  .hero-left {
+    max-width: 700px;
+    margin: auto;
+    order: 2;
+  }
+  .hero-right {
+    order: 1;
+    min-height: 520px;
+  }
+  .hero-description {
+    margin: 0 auto 40px;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 135px 0 60px; /* Kept the +15px balance for small tablet viewports */
+  }
+  .profile-ring img {
+    transform: scale(1.05);
+  }
+  .hero-title {
+    font-size: 3.6rem;
+    letter-spacing: -2px;
+  }
+  .hero-role {
+    font-size: 1.2rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .profile-ring {
+    width: 250px;
+    height: 250px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+  .hero-socials {
+    margin-top: 10px;
+  }
+  .hero-socials a {
+    width: 54px;
+    height: 54px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .profile-ring img {
+    transform: scale(1);
+  }
+  .hero-small-title {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+  }
+  .hero-role {
+    font-size: 1rem;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+  }
+  .profile-ring {
+    width: 220px;
+    height: 210px;
+  }
+  .hero-glow {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .hero-container {
+    max-width: 1450px;
+    margin: auto;
+  }
+  .hero-title {
+    font-size: 6.5rem;
+  }
+  .profile-ring {
+    width: 360px;
+    height: 360px;
+  }
+  .hero-glow {
+    width: 560px;
+    height: 560px;
+  }
+}
+
+/*================ ANIMATIONS =================*/
+
+.hero-left > * {
+  animation: fadeUp 0.8s ease both;
+}
+.hero-left > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.hero-left > *:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.hero-left > *:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.hero-left > *:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.hero-left > *:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.hero-left > *:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.primary-btn,
+.secondary-btn,
+.hero-socials a,
+.profile-ring {
+  will-change: transform;
+}

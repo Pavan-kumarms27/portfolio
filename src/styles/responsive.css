@@ -1,0 +1,107 @@
+/* ===========================
+   LARGE TABLETS
+=========================== */
+
+@media (max-width: 1024px) {
+  section {
+    padding: 90px 5%;
+  }
+
+  .hero-container,
+  .contact-wrapper,
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    order: -1;
+    margin-bottom: 50px;
+  }
+
+  .profile-circle {
+    width: 320px;
+    height: 320px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-buttons,
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* ===========================
+   TABLETS
+=========================== */
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card,
+  .timeline-card {
+    padding: 25px;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 600px) {
+  section {
+    padding: 70px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+
+  .profile-circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .contact-wrapper {
+    gap: 25px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-card {
+    margin-left: 30px;
+  }
+
+  .project-content {
+    padding: 25px;
+  }
+}

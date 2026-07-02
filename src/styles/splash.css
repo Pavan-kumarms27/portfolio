@@ -1,0 +1,19 @@
+.splash {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #04050d;
+  z-index: 99999999;
+}
+
+.splash h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: -2px;
+  font-family: "Poppins", sans-serif;
+}

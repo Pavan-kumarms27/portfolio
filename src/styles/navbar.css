@@ -1,0 +1,199 @@
+/* --- 1. Base Navbar Container --- */
+.navbar {
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1180px, 95%);
+  z-index: 999;
+  transition: all 0.35s ease;
+}
+
+/* --- 2. The Inner Wrapper (Handles the actual visual pill) --- */
+.nav-wrapper {
+  position: relative; /* CRITICAL: Acts as the anchor for the mobile dropdown */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s ease;
+}
+
+/* Target the wrapper on scroll, don't double-style the outer container */
+.navbar-scroll .nav-wrapper {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.15));
+  box-shadow: var(--shadow, 0 20px 50px rgba(0, 0, 0, 0.4));
+  padding: 10px 30px; /* Subtle shrink effect on scroll */
+}
+
+/* --- 3. Branding & Typography --- */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+/* --- 4. Navigation Links & Cleaned Underline Logic --- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links button {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--text, #fff);
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: 0.35s;
+  font-size: 1.07rem;
+  font-weight: 500;
+}
+
+.nav-links button:hover {
+  color: var(--primary);
+  background: rgba(124, 58, 237, 0.08);
+}
+
+/* Combined pseudoelement logic to prevent jumpy bugs */
+.nav-links button::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transform: translateX(-50%);
+  transition: 0.2s ease;
+  border-radius: 2px;
+}
+
+.nav-links button:hover::after,
+.nav-links button.active-link::after {
+  width: 60%; /* Clean look under the text */
+}
+
+.active-link {
+  color: var(--primary) !important;
+}
+
+/* --- 5. Interactive UI Elements --- */
+.resume-btn {
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.resume-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+}
+
+/* Base state for Mobile Toggle Button (Hidden on Desktop) */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* --- 6. Responsive Mobile Design --- */
+@media (max-width: 900px) {
+  /* Ensure the navbar gives a bit more breathing room on small screens */
+  .navbar {
+    top: 15px;
+  }
+
+  .nav-wrapper {
+    padding: 12px 20px;
+  }
+
+  /* Show menu button on mobile */
+  .menu-btn {
+    display: block;
+    order: 3;
+  }
+
+  /* If you have a theme button or CTA button you want to keep visible next to the burger menu */
+  .theme-btn,
+  .resume-btn {
+    order: 2;
+  }
+
+  /* Hide large resume text or scale down button sizes if needed */
+  .resume-btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  /* Absolute position relative to .nav-wrapper so it snaps perfectly inline */
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 15px); /* Sits exactly below the pill wrapper with a gap */
+    right: 0;
+    width: 260px;
+    background: var(--card, #131b2e); /* Dark glassmorphism card */
+    padding: 20px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    /* Smooth transition state */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Triggered via JS toggle class */
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Make mobile links stretch nicely and change hover behavior */
+  .nav-links button {
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
+    border-radius: 12px;
+  }
+
+  .nav-links button:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* Disable the desktop underline effect on mobile */
+  .nav-links button::after {
+    display: none;
+  }
+}

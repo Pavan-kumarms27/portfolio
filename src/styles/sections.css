@@ -1,0 +1,1144 @@
+/* ================= ABOUT ================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.about {
+  padding: 120px 0;
+  width: 100%;
+}
+
+.section-tag {
+  color: var(--primary);
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin: 15px 0 30px;
+  color: aliceblue;
+}
+
+.about-text {
+  max-width: 800px;
+  line-height: 1.9;
+  color: var(--text-light);
+}
+
+.about-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.about-card {
+  padding: 35px;
+  background: var(
+    --surface,
+    rgba(255, 255, 255, 0.03)
+  ); /* FIX: Added fallback background */
+  border-radius: 20px; /* FIX: Added smooth rounding to match style */
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.05));
+  transition: 0.35s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  background: var(
+    --card,
+    rgba(255, 255, 255, 0.06)
+  ); /* FIX: More dynamic interaction */
+}
+
+.about-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+  font-size: 1.7rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.about-card h3 {
+  margin-bottom: 15px;
+  color: azure;
+}
+
+.about-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ================= SKILLS ================= */
+
+.skills {
+  padding: 120px 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 60px;
+}
+
+.skill-card {
+  padding: 30px;
+  background: var(
+    --surface,
+    rgba(255, 255, 255, 0.03)
+  ); /* FIX: Added background */
+  border-radius: 24px;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.05));
+  transition: 0.35s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.skill-card h3 {
+  margin-bottom: 25px;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-pill {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+  transition: 0.3s;
+  cursor: default;
+  color: honeydew;
+}
+
+.skill-pill:hover {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  transform: scale(1.05);
+  border-color: transparent;
+}
+
+/*================ EXPERIENCE ================*/
+
+.experience {
+  padding: 120px 0;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 70px;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(var(--primary), var(--secondary));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -2px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 2; /* FIX: Prevent lines overlapping over the icon */
+}
+
+.timeline-card {
+  margin-left: 55px;
+  padding: 30px;
+  background: var(
+    --surface,
+    rgba(255, 255, 255, 0.03)
+  ); /* FIX: Added background */
+  border-radius: 20px;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.05));
+}
+
+.timeline-card h3 {
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.timeline-card h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.timeline-date,
+.timeline-location {
+  display: block;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.timeline-card ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.timeline-card li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+/*================ EDUCATION ================*/
+
+.education {
+  padding: 120px 0;
+}
+
+.education-wrapper {
+  margin-top: 70px;
+}
+
+.education-card {
+  padding: 40px;
+  background: var(
+    --surface,
+    rgba(255, 255, 255, 0.03)
+  ); /* FIX: Added background */
+  border-radius: 24px;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.05));
+  transition: 0.35s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.education-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.8rem;
+  flex-shrink: 0; /* FIX: Prevents layout distortion on smaller screens */
+}
+
+.education-header h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.education-header h4 {
+  color: var(--primary);
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 25px 0;
+}
+
+.education-meta span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+}
+
+.education-grade {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.education-card p {
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+/*================ PROJECTS ================*/
+
+.projects {
+  padding: 120px 0;
+}
+
+.section-description {
+  max-width: 700px;
+  margin: 20px auto 0;
+  text-align: center;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 35px;
+  margin-top: 70px;
+}
+
+.project-card {
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(
+    --surface,
+    rgba(255, 255, 255, 0.03)
+  ); /* FIX: Added background */
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.05));
+  transition: 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+}
+
+.project-image {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s;
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: 0.35s;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay a {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: #111827;
+  font-size: 1.3rem;
+  transition: 0.35s;
+}
+
+.project-overlay a:hover {
+  transform: scale(1.12);
+  background: var(--primary);
+  color: white;
+}
+
+.project-content {
+  padding: 30px;
+}
+
+.project-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.project-content p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.project-tech span {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.12);
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+.project-content ul {
+  padding-left: 20px;
+}
+
+.project-content li {
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+/* ================= PROJECT MODAL ================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 20, 0.82);
+  backdrop-filter: blur(14px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  z-index: 9999;
+}
+
+.project-modal {
+  position: relative;
+  width: min(1000px, 95vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 28px;
+  padding: 30px;
+}
+
+.project-modal img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.project-modal h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.project-modal h3 {
+  margin: 30px 0 15px;
+  color: var(--primary);
+}
+
+.project-modal p {
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.project-modal ul {
+  padding-left: 20px;
+}
+
+.project-modal li {
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+/* ===== CLOSE BUTTON ===== */
+
+.close-modal {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(18px);
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  z-index: 10000;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
+
+  transition: 0.35s ease;
+}
+
+.close-modal:hover {
+  transform: rotate(90deg) scale(1.08);
+
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.45);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 35px;
+}
+
+.modal-buttons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 22px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+
+  color: white;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.modal-buttons a:hover {
+  transform: translateY(-4px);
+}
+
+.modal-image {
+  position: relative;
+}
+
+/*================ CONTACT ================*/
+
+.contact {
+  padding: 120px 0;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* FIX: Added responsive layout strategy instead of rigid 1fr 1fr */
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.contact-info,
+.contact-form {
+  padding: 40px;
+  background: var(
+    --surface,
+    rgba(255, 255, 255, 0.03)
+  ); /* FIX: Setup container background colors */
+  border-radius: 24px;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.05));
+}
+
+.contact-info h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 35px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.contact-item svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.contact-social {
+  display: flex;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.contact-social a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--glass, rgba(255, 255, 255, 0.05));
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.05));
+  transition: 0.3s;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.contact-social a:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.contact-social a:visited {
+  color: var(--text);
+}
+
+/* Form Fields Styling (Fixes missing input styling) */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08));
+  border-radius: 14px;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 22px;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary, #8b5cf6);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.15);
+}
+
+/* Button & Actions */
+.contact-form button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    var(--primary, #8b5cf6),
+    var(--secondary, #3b82f6)
+  );
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.contact-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.contact-form button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+
+.contact-form button:hover::before {
+  animation: shine 0.8s ease;
+}
+
+@keyframes shine {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Loader */
+.loader {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-top-color: #fff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* SUCCESS CARD */
+.contact-success {
+  min-height: 590px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  border-radius: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.success-icon {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow:
+    0 0 25px rgba(139, 92, 246, 0.45),
+    0 0 70px rgba(59, 130, 246, 0.25);
+}
+
+.contact-success h2 {
+  margin-top: 25px;
+  font-size: 2.2rem;
+}
+
+.contact-success p {
+  max-width: 360px;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.contact-success button {
+  padding: 16px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  transition: 0.35s;
+}
+
+.contact-success button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(124, 58, 237, 0.3);
+}
+
+/* Error */
+.contact-error {
+  color: #ff6b6b;
+  font-size: 0.95rem;
+  margin-top: -8px;
+  margin-bottom: 15px;
+}
+
+/* Honeypot Hidden Visual Hide Rule */
+.sr-only-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.msgbox{
+  size: none;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    padding: 80px 0;
+  }
+
+  .contact-wrapper {
+    margin-top: 40px;
+    gap: 30px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 25px;
+  }
+
+  .contact-success {
+    min-height: 520px;
+    padding: 35px;
+  }
+
+  .success-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+  }
+
+  .contact-success h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/*================ FOOTER ================*/
+
+.footer {
+  padding: 60px 0;
+  text-align: center;
+  border-top: 1px solid var(--border, rgba(255, 255, 255, 0.05));
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer h2 {
+  font-size: 2rem;
+}
+
+.footer h2 span {
+  color: var(--primary);
+}
+
+.footer p {
+  color: var(--text-light);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.footer-social a {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--glass, rgba(255, 255, 255, 0.05));
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.footer small {
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer small svg {
+  color: #ff4d6d;
+}
+
+/*================ PROJECT MODAL ================*/
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 30px;
+}
+
+.project-modal {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto; /* FIX: Specified dynamic vertical scrolling */
+  padding: 35px;
+  border-radius: 28px;
+  background: var(
+    --card,
+    #1f2937
+  ); /* FIX: Added concrete background so content isn't transparent over page */
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+}
+
+.project-modal img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.project-modal h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.project-modal h3 {
+  margin: 30px 0 15px;
+  color: var(--primary);
+}
+
+.close-modal {
+  position: sticky;
+  left: 2500px;
+  top: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.close-modal:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.modal-buttons a {
+  padding: 15px 25px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  text-decoration: none;
+}
+
+.view-project {
+  margin-top: 25px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+  color: var(--text, #fff);
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.view-project:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: transparent;
+}
+
+/*================ LOADER ================*/
+
+.loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg, #0b0f19);
+  z-index: 99999;
+}
+
+.loader h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.loader h1 span {
+  color: var(--primary);
+}
+
+.loader-bar {
+  width: 260px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.loader-progress {
+  height: 100%;
+  width: 0; /* FIX: Needs a starting width for the script/CSS animation keyframe to control */
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.loader p {
+  margin-top: 20px;
+  color: var(--text-light);
+  letter-spacing: 2px;
+}
+/*================ RESPONSIVE MEDIA QUERIES ================*/
+
+/* Global Box-Sizing Injection (Ensures padding doesn't cause horizontal overflow) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --- Tablet & Mobile Layout Shifts (under 1024px) --- */
+@media (max-width: 1024px) {
+  .about,
+  .skills,
+  .experience,
+  .education,
+  .projects,
+  .contact {
+    padding: 80px 0; /* Normalized section padding for compact screens */
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 25px;
+  }
+}
+
+/* --- Smartphone & Mobile Viewports (under 768px) --- */
+@media (max-width: 768px) {
+  /* ... keep your other existing mobile media query rules here ... */
+
+  /* FIX: Forces the overlay to respect the image container boundaries on mobile */
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .project-image {
+    height: 220px; /* Ensures fixed boundary on mobile */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  /* FIX: Ensures overlay ONLY displays on explicit hover/active press on mobile */
+  .project-overlay {
+    opacity: 0;
+    pointer-events: none; /* Prevents ghost overlay clicks on mobile touch */
+    transition: opacity 0.3s ease;
+  }
+
+  /* Allows tap-to-reveal behavior on mobile screens */
+  .project-card:hover .project-overlay,
+  .project-card:active .project-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* FIX: Forces text content down below the image stream safely */
+  .project-content {
+    padding: 25px 20px;
+    background: transparent;
+    position: relative;
+    z-index: 2;
+    display: block;
+    clear: both;
+  }
+}
+
+/* --- Ultra-Small Devices & Compact Displays (under 480px) --- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px; /* Extra breathing space for tiny screens */
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .about-card,
+  .skill-card {
+    padding: 20px;
+  }
+
+  .skill-pill {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+
+  .modal-buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+}

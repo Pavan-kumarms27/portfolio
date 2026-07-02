@@ -1,0 +1,16 @@
+html {
+  background-color: var(--bg); /* Prevents white flashes while loading */
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #7c3aed22, transparent 30%),
+    radial-gradient(circle at bottom right, #06b6d422, transparent 30%),
+    var(--bg);
+  background-attachment: fixed; /* Keep the glow locked in place when scrolling */
+  transition:
+    background 0.35s,
+    color 0.35s;
+}
