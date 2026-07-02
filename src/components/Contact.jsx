@@ -140,11 +140,6 @@ function Contact() {
             </div>
 
             <div className="contact-item">
-              <FaPhoneAlt />
-              <span>+91 7337656830</span>
-            </div>
-
-            <div className="contact-item">
               <FaMapMarkerAlt />
               <span style={{ textWrap: "nowrap" }}>Bangalore, Karnataka</span>
             </div>
