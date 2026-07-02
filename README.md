@@ -1,16 +1,114 @@
-# React + Vite
+# 💼 Pavan Kumar | Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive, and interactive developer portfolio built to showcase my projects, technical skills, and professional experience.
 
-Currently, two official plugins are available:
+🌐 **Live Demo:** https://pavanms-portfolio.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Modern and responsive design
+- Smooth page animations with Framer Motion
+- Interactive custom cursor
+- Beautiful glassmorphism UI
+- Skills, experience, and education sections
+- Project showcase with detailed modals
+- Resume request option
+- Contact section with social links
+- Optimized for desktop, tablet, and mobile
+- Fast performance with Vite
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠 Tech Stack
+
+### Frontend
+
+- React.js
+- Vite
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+
+### Libraries
+
+- Framer Motion
+- React Icons
+
+### Deployment
+
+- Vercel
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── assets/
+ ├── components/
+ ├── data/
+ ├── styles/
+ ├── App.jsx
+ └── main.jsx
+```
+
+---
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/your-username/portfolio.git
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## 📱 Responsive Design
+
+The portfolio is fully optimized for:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+---
+
+## 📬 Contact
+
+**Pavan Kumar M S**
+
+📧 Email: pavan.ms005@gmail.com
+
+💼 LinkedIn:
+https://linkedin.com/in/pavan-kumar-m-s-18002529b
+
+🐙 GitHub:
+https://github.com/Pavan-kumarms27
+
+---
+
+## 📄 License
+
+This project is open source and available under the MIT License.
