@@ -811,7 +811,7 @@
 }
 
 .msgbox{
-  size: none;
+  resize: none;
 }
 /* Responsive */
 @media (max-width: 768px) {
