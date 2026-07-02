@@ -1,4 +1,4 @@
-# 💼 Pavan Kumar  M S| Developer Portfolio
+# 💼 Pavan Kumar  M S | Developer Portfolio
 
 A modern, responsive, and interactive developer portfolio built to showcase my projects, technical skills, and professional experience.
 
