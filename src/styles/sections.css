@@ -957,8 +957,7 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
-  -webkit-background-clip: text;
+  background-color: #0b0f19;
   border: none;
   cursor: pointer;
   display: flex;
@@ -967,9 +966,6 @@
   transition: 0.2s;
 }
 
-.close-modal:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
 
 .modal-buttons {
   display: flex;

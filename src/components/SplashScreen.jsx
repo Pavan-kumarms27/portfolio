@@ -2,14 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import "../styles/splash.css";
 
-const greetings = [
-  "Hello.",
-  "Namaste.",
-  "Konnichiwa.",
-  "Bonjour.",
-  "Hola.",
-  "Welcome.",
-];
+const greetings = ["Hello.", "Namaste.", "Konnichiwa.", "Welcome."];
 
 function SplashScreen({ onFinish }) {
   const [index, setIndex] = useState(0);
